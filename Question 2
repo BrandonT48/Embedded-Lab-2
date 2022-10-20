@@ -1,0 +1,30 @@
+#include <msp430.h> 
+
+
+/**
+ * main.c
+ */
+sum(int a, int b);
+int a,b,c,x,y,result;
+int main(void)
+{
+	WDTCTL = WDTPW | WDTHOLD;
+
+	int a = 0b00000000000000001000000000000001; //binary arithmetic
+	int b = 0b00000000000000000111111111111111; //binary arithmetic
+	int c;
+
+	c = sum(a,b);
+	while(1);
+
+	return 0;
+}
+
+sum(int x, int y)
+{
+   int result;
+   result = x + y;
+
+   return result;
+}
+
